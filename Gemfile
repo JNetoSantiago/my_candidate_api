@@ -38,4 +38,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # https://github.com/rubocop/rubocop-rspec
+  gem "rubocop-rspec", require: false
+
+  # https://github.com/rubocop/rubocop-performance
+  gem "rubocop-performance", require: false
 end
