@@ -1,14 +1,145 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/joao/Projects/challenge/backend_chalenge/app/controllers/application_controller.rb": {
+      "/app/app/services/create_politicians_expenses.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          14,
+          null,
+          14,
+          14,
+          null,
+          14,
+          null,
+          14,
+          7,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          14,
+          14,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          14,
+          null,
+          14,
+          null,
+          0,
+          null,
+          null,
+          1,
+          14,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          14,
+          null,
+          14,
+          null,
+          0,
+          null,
+          null,
+          1,
+          7,
+          null,
+          7,
+          null,
+          7,
+          null,
+          0,
+          null,
+          0,
+          null
+        ],
+        "branches": {
+          "[:unless, 0, 10, 6, 10, 38]": {
+            "[:else, 1, 10, 6, 10, 38]": 14,
+            "[:then, 2, 10, 6, 10, 10]": 0
+          },
+          "[:if, 3, 17, 6, 19, 9]": {
+            "[:then, 4, 18, 8, 18, 50]": 7,
+            "[:else, 5, 17, 6, 19, 9]": 7
+          },
+          "[:if, 6, 33, 4, 39, 24]": {
+            "[:then, 7, 33, 4, 39, 5]": 2,
+            "[:else, 8, 33, 4, 39, 24]": 12
+          },
+          "[:unless, 9, 56, 4, 56, 117]": {
+            "[:else, 10, 56, 4, 56, 117]": 14,
+            "[:then, 11, 56, 4, 56, 95]": 0
+          }
+        }
+      },
+      "/app/app/models/politician.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null
+        ],
+        "branches": {}
+      },
+      "/app/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ],
+        "branches": {}
+      },
+      "/app/app/models/expense.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ],
+        "branches": {}
+      },
+      "/app/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
         ],
         "branches": {}
       },
-      "/home/joao/Projects/challenge/backend_chalenge/app/jobs/application_job.rb": {
+      "/app/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -20,17 +151,9 @@
         ],
         "branches": {}
       },
-      "/home/joao/Projects/challenge/backend_chalenge/app/mailers/application_mailer.rb": {
+      "/app/app/mailers/application_mailer.rb": {
         "lines": [
           0,
-          0,
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "/home/joao/Projects/challenge/backend_chalenge/app/models/application_record.rb": {
-        "lines": [
           0,
           0,
           0
@@ -38,6 +161,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1748622380
+    "timestamp": 1748636691
   }
 }
