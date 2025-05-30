@@ -50,14 +50,14 @@ group :development, :test do
 
   # https://github.com/bkeepers/dotenv
   gem "dotenv"
+
+  # help to kill N+1 queries and unused eager loading
+  gem "bullet"
 end
 
 group :development do
   # https://github.com/evilmartians/lefthook
   gem "lefthook", require: false
-
-  # help to kill N+1 queries and unused eager loading
-  gem "bullet"
 end
 
 group :test do
