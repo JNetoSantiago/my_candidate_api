@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe CreatePoliticiansExpenses do
-  let(:service)       { described_class.new }
+  let(:service)       { described_class.new                                             }
   let(:csv_file_path) { Rails.root.join('spec/fixtures/files/politicians_expenses.csv') }
-  let(:csv_file)      { File.open(csv_file_path) }
+  let(:csv_file)      { File.open(csv_file_path)                                        }
 
   describe '#call' do
     let(:result) { service.call(csv_file: csv_file, state: 'PI', batch_size: 2) }
@@ -19,7 +19,7 @@ RSpec.describe CreatePoliticiansExpenses do
 
     it 'creates correct politician names' do
       result
-      expect(Politician.pluck(:name)).to eq(['Julio Arcoverde', 'Fausto Pinato'])
+      expect(Politician.pluck(:name)).to eq([ 'Julio Arcoverde', 'Fausto Pinato' ])
     end
 
     it 'creates 14 expenses' do
