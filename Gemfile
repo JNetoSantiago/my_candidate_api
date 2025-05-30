@@ -48,19 +48,19 @@ end
 
 group :development do
   # https://github.com/evilmartians/lefthook
-  gem 'lefthook', require: false
+  gem "lefthook", require: false
 end
 
 group :test do
   # https://github.com/rspec/rspec-rails
-  gem 'rspec-rails', '~> 8.0.0'
+  gem "rspec-rails", "~> 8.0.0"
 
   # https://github.com/thoughtbot/factory_bot_rails
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
 
   # https://github.com/DatabaseCleaner/database_cleaner-active_record
-  gem 'database_cleaner-active_record'
+  gem "database_cleaner-active_record"
 
   # https://github.com/thoughtbot/shoulda-matchers
-  gem 'shoulda-matchers'
+  gem "shoulda-matchers"
 end
