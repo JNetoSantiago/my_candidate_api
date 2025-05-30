@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_30_124823) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_30_170004) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -42,6 +42,31 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_30_124823) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "expenses", force: :cascade do |t|
+    t.bigint "politician_id", null: false
+    t.datetime "issue_date"
+    t.string "supplier_name"
+    t.string "document_url"
+    t.decimal "amount", precision: 10, scale: 2
+    t.string "description"
+    t.integer "document_kind", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["politician_id"], name: "index_expenses_on_politician_id"
+  end
+
+  create_table "politicians", force: :cascade do |t|
+    t.string "name"
+    t.string "cpf"
+    t.integer "external_id"
+    t.string "state"
+    t.string "party"
+    t.string "photo_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "expenses", "politicians"
 end

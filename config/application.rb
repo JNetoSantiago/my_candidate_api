@@ -24,6 +24,12 @@ module BackendChalenge
 
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.available_locales = [:'pt-BR', :en]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
+    config.autoload_paths += Dir["#{config.root}/services/**/"]
+
     config.time_zone = ENV.fetch("TZ", "America/Fortaleza")
     config.active_record.default_timezone = :utc
 
