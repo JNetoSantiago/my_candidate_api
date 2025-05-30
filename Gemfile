@@ -46,6 +46,11 @@ group :development, :test do
   gem "rubocop-performance", require: false
 end
 
+group :development do
+  # https://github.com/evilmartians/lefthook
+  gem 'lefthook', require: false
+end
+
 group :test do
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 8.0.0'
