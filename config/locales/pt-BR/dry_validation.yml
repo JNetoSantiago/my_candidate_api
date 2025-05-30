@@ -1,0 +1,18 @@
+pt-BR:
+  dry_validation:
+    errors:
+      key?: "é obrigatório"
+      filled?: "não pode estar em branco"
+      str?: "deve ser uma string"
+      int?: "deve ser um número inteiro"
+      format?: "formato inválido"
+      size?: "deve ter tamanho igual a %{size}"
+      rules:
+        external_id:
+          filled?: "é obrigatório"
+          int?: "deve ser um número inteiro"
+        party:
+          filled?: "é obrigatório"
+        state:
+          filled?: "é obrigatório"
+          size?: "deve ter exatamente 2 letras"

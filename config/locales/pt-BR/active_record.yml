@@ -1,0 +1,18 @@
+pt-BR:
+  activerecord:
+    models:
+      politician: "Político"
+    attributes:
+      politician:
+        name: "Nome"
+        cpf: "CPF"
+        external_id: "ID externo"
+        state: "Estado"
+        party: "Partido"
+        photo_url: "Foto"
+  errors:
+    messages:
+      record_invalid: "Validação falhou: %{errors}"
+      blank: "não pode ficar em branco"
+      taken: "já está em uso"
+      invalid: "não é válido"
