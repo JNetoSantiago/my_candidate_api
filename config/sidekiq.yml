@@ -1,0 +1,8 @@
+---
+:concurrency: 3
+:pidfile: tmp/pids/sidekiq.pid
+:timeout: 40
+production:
+  :concurrency: 3
+:queues:
+  - default

@@ -43,6 +43,9 @@ db-migrate:
 db-reset:
 	docker compose run --rm $(APP_NAME) rails db:drop db:create db:migrate
 
+console:
+	docker compose run --rm $(APP_NAME) rails console
+
 rails:
 	docker compose run --rm $(APP_NAME) rails $(ARG)
 

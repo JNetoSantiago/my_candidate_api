@@ -26,7 +26,21 @@ services:
       - my_candidate_pg
       - my_candidate_redis
     environment:
-      DATABASE_HOST: my_candidate_pg
+      DATABASE_HOST: ${DATABASE_HOST}
+      REDIS_URL: ${REDIS_URL}
+
+  my_candidate_sidekiq:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: bundle exec sidekiq
+    volumes:
+      - .:/app
+    depends_on:
+      - my_candidate_pg
+      - my_candidate_redis
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
       REDIS_URL: ${REDIS_URL}
 
 volumes:
