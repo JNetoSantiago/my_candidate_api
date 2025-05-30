@@ -52,5 +52,8 @@ rails:
 rspec:
 	docker compose run --rm $(APP_NAME) bundle exec rspec
 
+coverage:
+	docker compose run --rm $(APP_NAME) bundle exec rspec
+
 lint:
 	docker compose run --rm $(APP_NAME) bundle exec rubocop

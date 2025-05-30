@@ -75,4 +75,7 @@ group :test do
 
   # https://github.com/thoughtbot/shoulda-matchers
   gem "shoulda-matchers"
+
+  # https://github.com/simplecov-ruby/simplecov
+  gem 'simplecov', require: false
 end

@@ -1,0 +1,43 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/joao/Projects/challenge/backend_chalenge/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/joao/Projects/challenge/backend_chalenge/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/joao/Projects/challenge/backend_chalenge/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/joao/Projects/challenge/backend_chalenge/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      }
+    },
+    "timestamp": 1748622380
+  }
+}
