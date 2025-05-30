@@ -24,6 +24,9 @@ module BackendChalenge
 
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.time_zone = ENV.fetch("TZ", "America/Fortaleza")
+    config.active_record.default_timezone = :utc
+
     config.active_job.queue_adapter = :sidekiq
 
     config.api_only = true
