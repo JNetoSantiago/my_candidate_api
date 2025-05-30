@@ -20,7 +20,7 @@ help:
 	@echo "  make lint            # Roda o RuboCop"
 
 up:
-	docker compose up --build
+	docker compose up -d
 
 down:
 	docker compose down
