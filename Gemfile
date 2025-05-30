@@ -32,8 +32,8 @@ gem "thruster", require: false
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
 
-# Useful, common monads in idiomatic Ruby 
-gem 'dry-monads'
+# Useful, common monads in idiomatic Ruby
+gem "dry-monads"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -77,5 +77,8 @@ group :test do
   gem "shoulda-matchers"
 
   # https://github.com/simplecov-ruby/simplecov
-  gem 'simplecov', require: false
+  gem "simplecov", require: false
+
+  # https://github.com/faker-ruby/faker
+  gem "faker"
 end
