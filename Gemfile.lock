@@ -93,6 +93,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.6.2)
+    dotenv (3.1.8)
     drb (2.2.3)
     erb (5.0.1)
     erubi (1.13.1)
@@ -303,6 +304,7 @@ DEPENDENCIES
   brakeman
   database_cleaner-active_record
   debug
+  dotenv
   factory_bot_rails
   lefthook
   pg (~> 1.1)

@@ -44,6 +44,9 @@ group :development, :test do
 
   # https://github.com/rubocop/rubocop-performance
   gem "rubocop-performance", require: false
+
+  # https://github.com/bkeepers/dotenv
+  gem "dotenv"
 end
 
 group :development do

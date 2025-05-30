@@ -1,0 +1,31 @@
+FROM ruby:3.4.3
+
+# Configura diretório da aplicação
+WORKDIR /app
+
+# Instala dependências do sistema
+RUN apt-get update -qq && \
+  apt-get install -y \
+  build-essential \
+  libpq-dev \
+  nodejs \
+  yarn \
+  libvips \
+  postgresql-client \
+  redis-tools \
+  && rm -rf /var/lib/apt/lists/*
+
+# Copia arquivos de dependência primeiro (para melhor cache)
+COPY Gemfile Gemfile.lock ./
+
+# Instala as gems
+RUN bundle install
+
+# Copia o restante da aplicação
+COPY . .
+
+# Deixa a porta do Rails acessível
+EXPOSE 3000
+
+# Remove o PID antigo e inicia o servidor
+CMD ["bash", "-c", "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0"]
