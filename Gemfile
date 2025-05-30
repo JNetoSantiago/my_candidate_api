@@ -78,4 +78,7 @@ group :test do
 
   # https://github.com/simplecov-ruby/simplecov
   gem 'simplecov', require: false
+
+  # https://github.com/faker-ruby/faker
+  gem 'faker'
 end
