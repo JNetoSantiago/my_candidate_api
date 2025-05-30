@@ -98,6 +98,14 @@ GEM
     diff-lcs (1.6.2)
     dotenv (3.1.8)
     drb (2.2.3)
+    dry-core (1.1.0)
+      concurrent-ruby (~> 1.0)
+      logger
+      zeitwerk (~> 2.6)
+    dry-monads (1.8.3)
+      concurrent-ruby (~> 1.0)
+      dry-core (~> 1.1)
+      zeitwerk (~> 2.6)
     erb (5.0.1)
     erubi (1.13.1)
     factory_bot (6.5.1)
@@ -318,6 +326,7 @@ DEPENDENCIES
   database_cleaner-active_record
   debug
   dotenv
+  dry-monads
   factory_bot_rails
   lefthook
   pg (~> 1.1)

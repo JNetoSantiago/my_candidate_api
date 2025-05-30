@@ -32,6 +32,9 @@ gem "thruster", require: false
 # Simple, efficient background processing for Ruby
 gem "sidekiq"
 
+# Useful, common monads in idiomatic Ruby 
+gem 'dry-monads'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
