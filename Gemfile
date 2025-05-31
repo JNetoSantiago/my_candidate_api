@@ -35,22 +35,22 @@ gem "sidekiq"
 # Useful, common monads in idiomatic Ruby
 gem "dry-monads"
 
-# A simple, configurable object container implemented in Ruby 
-gem 'dry-container'
+# A simple, configurable object container implemented in Ruby
+gem "dry-container"
 
 # Container-agnostic constructor injection mixin
-gem 'dry-auto_inject'
+gem "dry-auto_inject"
 
 # Validation library with type-safe schemas and rules
-gem 'dry-validation'
+gem "dry-validation"
 
-gem 'dry-struct'
+gem "dry-struct"
 
-# CSV Reading and Writing 
-gem 'csv'
+# CSV Reading and Writing
+gem "csv"
 
-# A library for bulk insertion of data into your database using ActiveRecord. 
-gem 'activerecord-import'
+# A library for bulk insertion of data into your database using ActiveRecord.
+gem "activerecord-import"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
