@@ -20,6 +20,10 @@ Shoulda::Matchers.configure do |config|
 end
 
 RSpec.configure do |config|
+  config.before do
+    ActiveJob::Base.queue_adapter = :test
+  end
+
   config.include FactoryBot::Syntax::Methods
 
   config.before(:suite) do

@@ -25,8 +25,8 @@ module BackendChalenge
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.i18n.default_locale = :'pt-BR'
-    config.i18n.available_locales = [:'pt-BR', :en]
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.available_locales = [ :'pt-BR', :en ]
+    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
 
     config.autoload_paths += Dir["#{config.root}/services/**/"]
 
@@ -36,5 +36,8 @@ module BackendChalenge
     config.active_job.queue_adapter = :sidekiq
 
     config.api_only = true
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: "_your_app_session"
   end
 end

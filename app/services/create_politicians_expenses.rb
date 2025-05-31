@@ -44,9 +44,11 @@ class CreatePoliticiansExpenses
   end
 
   def build_expense(row, politician_id)
+    issue_date = Date.parse(row["datEmissao"]) rescue nil
+
     expense = Expense.new(
       politician_id: politician_id,
-      issue_date: Date.parse(row["datEmissao"]),
+      issue_date:,
       supplier_name: row["txtFornecedor"],
       document_url: row["urlDocumento"],
       amount: row["vlrLiquido"].to_f,

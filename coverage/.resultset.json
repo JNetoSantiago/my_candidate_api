@@ -1,6 +1,41 @@
 {
   "RSpec": {
     "coverage": {
+      "/app/app/controllers/api/v1/csv_upload_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          5,
+          3,
+          6,
+          null,
+          3,
+          null,
+          3,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "branches": {
+          "[:if, 0, 5, 8, 14, 11]": {
+            "[:then, 1, 6, 10, 11, 86]": 3,
+            "[:else, 2, 13, 10, 13, 106]": 2
+          }
+        }
+      },
+      "/app/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ],
+        "branches": {}
+      },
       "/app/app/services/create_politicians_expenses.rb": {
         "lines": [
           1,
@@ -9,31 +44,31 @@
           1,
           null,
           1,
+          4,
+          null,
+          4,
+          56,
+          null,
+          56,
+          56,
+          null,
+          56,
+          null,
+          56,
+          28,
+          null,
+          null,
+          null,
+          4,
+          null,
+          4,
+          null,
+          null,
           1,
           null,
           1,
-          14,
-          null,
-          14,
-          14,
-          null,
-          14,
-          null,
-          14,
-          7,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          14,
-          14,
+          56,
+          56,
           null,
           null,
           null,
@@ -41,15 +76,17 @@
           null,
           null,
           null,
-          14,
+          56,
           null,
-          14,
+          56,
           null,
           0,
           null,
           null,
           1,
-          14,
+          56,
+          null,
+          56,
           null,
           null,
           null,
@@ -58,43 +95,84 @@
           null,
           null,
           null,
-          14,
+          56,
           null,
-          14,
+          56,
           null,
           0,
           null,
           null,
           1,
-          7,
+          28,
           null,
-          7,
+          28,
           null,
-          7,
+          28,
+          null,
+          0,
           null,
           0,
           null,
-          0,
           null
         ],
         "branches": {
           "[:unless, 0, 10, 6, 10, 38]": {
-            "[:else, 1, 10, 6, 10, 38]": 14,
+            "[:else, 1, 10, 6, 10, 38]": 56,
             "[:then, 2, 10, 6, 10, 10]": 0
           },
           "[:if, 3, 17, 6, 19, 9]": {
-            "[:then, 4, 18, 8, 18, 50]": 7,
-            "[:else, 5, 17, 6, 19, 9]": 7
+            "[:then, 4, 18, 8, 18, 50]": 28,
+            "[:else, 5, 17, 6, 19, 9]": 28
           },
           "[:if, 6, 33, 4, 39, 24]": {
-            "[:then, 7, 33, 4, 39, 5]": 2,
-            "[:else, 8, 33, 4, 39, 24]": 12
+            "[:then, 7, 33, 4, 39, 5]": 8,
+            "[:else, 8, 33, 4, 39, 24]": 48
           },
-          "[:unless, 9, 56, 4, 56, 117]": {
-            "[:else, 10, 56, 4, 56, 117]": 14,
-            "[:then, 11, 56, 4, 56, 95]": 0
+          "[:unless, 9, 58, 4, 58, 117]": {
+            "[:else, 10, 58, 4, 58, 117]": 56,
+            "[:then, 11, 58, 4, 58, 95]": 0
           }
         }
+      },
+      "/app/app/jobs/csv_upload_job.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null
+        ],
+        "branches": {
+          "[:if, 0, 11, 4, 11, 30]": {
+            "[:then, 1, 11, 4, 11, 18]": 0,
+            "[:else, 2, 11, 4, 11, 30]": 0
+          },
+          "[:if, 3, 12, 4, 12, 52]": {
+            "[:then, 4, 12, 4, 12, 26]": 0,
+            "[:else, 5, 12, 4, 12, 52]": 0
+          }
+        }
+      },
+      "/app/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "branches": {}
       },
       "/app/app/models/politician.rb": {
         "lines": [
@@ -132,25 +210,6 @@
         ],
         "branches": {}
       },
-      "/app/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {}
-      },
-      "/app/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0
-        ],
-        "branches": {}
-      },
       "/app/app/mailers/application_mailer.rb": {
         "lines": [
           0,
@@ -161,6 +220,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1748636691
+    "timestamp": 1748651041
   }
 }
