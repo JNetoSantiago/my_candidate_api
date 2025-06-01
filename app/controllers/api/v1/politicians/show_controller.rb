@@ -6,7 +6,7 @@ module Api
           politician = Politician.includes(:expenses).find_by(id: params[:id])
 
           if politician.present?
-            render json: PoliticianSerializer.new(politician, include: [:expenses]).serializable_hash.to_json, status: :ok
+            render json: PoliticianShowSerializer.new(politician, include: [ :expenses ]).serializable_hash.to_json, status: :ok
           else
             render json: { error: "Político não encontrado!" }, status: :not_found
           end
