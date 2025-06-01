@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :politician do
     name { "Jhon Doe" }
-    cpf { Faker::IDNumber.brazilian_citizen_number }
+    cpf { Faker::Number.number(digits: 11) }
     external_id { Faker::Number.unique.number(digits: 5) }
     state { "PI" }
     party { "ABC" }
