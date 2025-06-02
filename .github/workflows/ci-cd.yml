@@ -59,7 +59,7 @@ jobs:
         run: bundle exec rspec
   
   deploy:
-    name: Deploy to EKS
+    name: Deploy to DigitalOcean
     runs-on: ubuntu-latest
     needs: test
     environment: production
@@ -68,21 +68,16 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Configurar AWS CLI
-        uses: aws-actions/configure-aws-credentials@v2
+      - name: Instalar doctl
+        uses: digitalocean/action-doctl@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          token: ${{ secrets.DO_API_TOKEN }}
+
+      - name: Configurar acesso ao cluster
+        run: doctl kubernetes cluster kubeconfig save my-cluster-name
 
       - name: Instalar kubectl
         uses: azure/setup-kubectl@v3
-        with:
-          version: v1.32.3
-
-      - name: Atualizar kubeconfig
-        run: |
-          aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name ${{ secrets.EKS_CLUSTER_NAME }}
 
       - name: Autenticar no Docker Hub
         uses: docker/login-action@v3
@@ -100,5 +95,7 @@ jobs:
       - name: Aplicar manifests no cluster
         run: |
           kubectl apply -f k8s/secrets.yaml
+          kubectl apply -f k8s/db-secret.yaml
           kubectl apply -f k8s/deployment.yaml
           kubectl apply -f k8s/service.yaml
+  
