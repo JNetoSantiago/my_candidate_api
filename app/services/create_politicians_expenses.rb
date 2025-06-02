@@ -3,7 +3,7 @@ require "csv"
 class CreatePoliticiansExpenses
   include Dry::Monads[:result, :do]
 
-  def call(csv_file:, state:, batch_size:)
+  def call(csv_file:, state:, batch_size:, on_progress: ->(count) { })
     expenses_batch = []
 
     CSV.foreach(csv_file.path, headers: true, col_sep: ";", encoding: "bom|utf-8") do |row|
@@ -13,13 +13,16 @@ class CreatePoliticiansExpenses
       expense = yield build_expense(row, politician.id)
 
       expenses_batch << expense
-
       if expenses_batch.size >= batch_size
+        on_progress.call(expenses_batch.size)
         yield flush_expenses_batch(expenses_batch)
       end
     end
 
-    expenses_batch.clear
+    unless expenses_batch.empty?
+      on_progress.call(expenses_batch.size)
+      yield flush_expenses_batch(expenses_batch)
+    end
 
     Success(true)
   end
