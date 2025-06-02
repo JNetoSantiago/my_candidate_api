@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_01_124040) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_01_132624) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -40,6 +40,18 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_01_124040) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "csv_uploads", force: :cascade do |t|
+    t.string "upload_id", null: false
+    t.integer "status", default: 0
+    t.integer "total_rows"
+    t.integer "processed_rows", default: 0
+    t.string "state"
+    t.text "error_message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["upload_id"], name: "index_csv_uploads_on_upload_id", unique: true
   end
 
   create_table "expenses", force: :cascade do |t|
