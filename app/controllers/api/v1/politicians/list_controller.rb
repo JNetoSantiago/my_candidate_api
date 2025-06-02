@@ -5,7 +5,7 @@ module Api
         def handler
           politicians = Politician.all
 
-          render json: PoliticianSerializer.new(politicians).serializable_hash.to_json, status: :ok
+          render json: PoliticianListSerializer.new(politicians).serializable_hash.to_json, status: :ok
         end
       end
     end
