@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my_candidate
+  name: mycandidate
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my_candidate
+      app: mycandidate
   template:
     metadata:
       labels:
-        app: my_candidate
+        app: mycandidate
     spec:
       containers:
-        - name: my_candidate
+        - name: mycandidate
           image: joaoneto123/my_candidate:latest
           ports:
             - containerPort: 3000
