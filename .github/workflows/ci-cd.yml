@@ -74,7 +74,7 @@ jobs:
           token: ${{ secrets.DO_API_TOKEN }}
 
       - name: Configurar acesso ao cluster
-        run: doctl kubernetes cluster kubeconfig save my-cluster-name
+        run: doctl kubernetes cluster kubeconfig save my-candidate
 
       - name: Instalar kubectl
         uses: azure/setup-kubectl@v3
