@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post "csv_upload", to: "csv_upload#handler"
+      get "upload_status/:upload_id", to: "upload_status#handler"
+
+      get "dashboard_stats", to: "dashboard#handler"
+      get "expenses_by_day", to: "expenses_by_day#handler"
 
       get "politicians", to: "politicians/list#handler"
       get "politicians/:id", to: "politicians/show#handler"
