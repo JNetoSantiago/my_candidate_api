@@ -42,3 +42,14 @@ Metrics/PerceivedComplexity:
 Style/NumberedParametersLimit:
   Max: 3
 
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 13
+
+RSpec/MultipleExpectations:
+  Max: 4
