@@ -19,3 +19,9 @@ test:
 production:
   <<: *default
   database: my_candidate_production
+  host: <%= ENV["DB_HOST"] %>
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  port: 5432
+  sslmode: require
