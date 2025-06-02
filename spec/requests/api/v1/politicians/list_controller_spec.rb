@@ -44,7 +44,7 @@ RSpec.describe Api::V1::Politicians::ListController, type: :request do
 
     it 'has type "politician" for each entry' do
       data.each do |politician|
-        expect(politician['type']).to eq('politician')
+        expect(politician['type']).to eq('politician_list')
       end
     end
 
