@@ -40,6 +40,9 @@ db-create:
 db-migrate:
 	docker compose run --rm $(APP_NAME) rails db:migrate
 
+db-rollback:
+	docker compose run --rm $(APP_NAME) rails db:rollback
+
 db-reset:
 	docker compose run --rm $(APP_NAME) rails db:drop db:create db:migrate
 
