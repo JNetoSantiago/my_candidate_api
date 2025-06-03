@@ -3,10 +3,22 @@ module Api
     module Politicians
       class ShowController < ApplicationController
         def handler
-          politician = Politician.includes(:expenses).find_by(id: params[:id])
+          politician = Politician.find_by(id: params[:id])
 
           if politician.present?
-            render json: PoliticianShowSerializer.new(politician, include: [ :expenses ]).serializable_hash.to_json, status: :ok
+            paginated_expenses = politician.expenses.order(amount: :desc).page(params[:page]).per(params[:per_page] || 10)
+
+            render json: PoliticianShowSerializer.new(
+              politician,
+              include: [ :expenses ],
+              params: { expenses: paginated_expenses }
+            ).serializable_hash.merge(
+              meta: {
+                current_page: paginated_expenses.current_page,
+                total_pages: paginated_expenses.total_pages,
+                total_count: paginated_expenses.total_count
+              }
+            ).to_json, status: :ok
           else
             render json: { error: "Político não encontrado!" }, status: :not_found
           end

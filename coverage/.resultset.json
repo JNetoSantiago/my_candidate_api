@@ -429,6 +429,18 @@
           6,
           4,
           null,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           2,
           null,
           null,
@@ -438,9 +450,9 @@
           null
         ],
         "branches": {
-          "[:if, 0, 8, 10, 12, 13]": {
-            "[:then, 1, 9, 12, 9, 128]": 4,
-            "[:else, 2, 11, 12, 11, 84]": 2
+          "[:if, 0, 8, 10, 24, 13]": {
+            "[:then, 1, 9, 12, 21, 34]": 4,
+            "[:else, 2, 23, 12, 23, 84]": 2
           }
         }
       },
@@ -452,17 +464,29 @@
           1,
           null,
           1,
+          8,
+          null,
           null,
           1,
           4,
           null,
           null,
           1,
+          4,
+          null,
+          null,
+          1,
+          4,
           4,
           null,
           null
         ],
-        "branches": {}
+        "branches": {
+          "[:if, 0, 20, 4, 20, 134]": {
+            "[:then, 1, 20, 12, 20, 128]": 4,
+            "[:else, 2, 20, 131, 20, 134]": 0
+          }
+        }
       },
       "/app/app/serializers/expense_serializer.rb": {
         "lines": [
@@ -527,6 +551,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1748823961
+    "timestamp": 1748915932
   }
 }
