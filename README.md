@@ -1,24 +1,30 @@
-# README
+# 📊 MyCandidate API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API desenvolvida em **Ruby on Rails 8** com suporte a background jobs via Sidekiq, serialização JSON:API, e estrutura modular com a gem `dry-rb`. O projeto é executado em ambiente Docker, com comandos de automação via Makefile.
 
-Things you may want to cover:
+## 🚀 Stack Principal
 
-* Ruby version
+- Ruby `3.4.3`
+- Rails `8.0.2`
+- PostgreSQL
+- Sidekiq
+- Kaminari (paginação)
+- JSONAPI::Serializer
+- Dry-Rb (monads)
+- RSpec (testes)
+- Docker + Docker Compose
 
-* System dependencies
+---
 
-* Configuration
+## 🐳 Como subir o projeto
 
-* Database creation
+### Pré-requisitos
 
-* Database initialization
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Make](https://www.gnu.org/software/make/) instalado (disponível nativamente no Linux/macOS)
 
-* How to run the test suite
+### Subir containers
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+make up
